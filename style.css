@@ -5,8 +5,8 @@
 body {
     margin: 0;
     padding: 0;
-    height: 80vh; /* Fallback for older browsers */
-    height: 80dvh; /* Adapts to mobile browser address bars */
+    min-height: 100vh; /* Fallback for older browsers */
+    min-height: 100dvh; /* Use full screen height and allow scrolling */
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -51,6 +51,20 @@ body {
     animation: sporadic-breathe 8s infinite ease-in-out;
 }
 
+/* --- Middle Circle (Grey, Inverse Animation) --- */
+.middle-circle {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 50%;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: inverse-breathe 8s infinite ease-in-out;
+}
+
 /* --- Inner Circle (Static) --- */
 .inner-circle {
     position: absolute; /* Places this on top of the outer circle */
@@ -86,10 +100,22 @@ body {
     100% { transform: scale(1); }
 }
 
+@keyframes inverse-breathe {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    10% { transform: translate(-50%, -50%) scale(0.92); }
+    20% { transform: translate(-50%, -50%) scale(1.05); }
+    35% { transform: translate(-50%, -50%) scale(0.9); }
+    50% { transform: translate(-50%, -50%) scale(0.95); }
+    65% { transform: translate(-50%, -50%) scale(0.9); }
+    75% { transform: translate(-50%, -50%) scale(1.08); }
+    90% { transform: translate(-50%, -50%) scale(0.92); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
 /* --- Info Card --- */
 .card {
     /* --- Customization Variables --- */
-    --card-width: 1500%;
+    --card-width: 90%;
     --card-max-width: 380px;
     --card-min-height: 120px;
     --title-size: 1.5rem;
@@ -124,7 +150,28 @@ body {
 
 .card-footer {
     font-size: var(--footer-size);
-    color: #404448;
+    color: #7C7C7C;
     font-weight: bold;
     margin-top: auto;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 480px) {
+    .container {
+        margin-top: 15vh; /* Reduce top margin on small screens */
+    }
+
+    .circle {
+        width: 150px; /* Smaller circle on mobile */
+        height: 150px;
+    }
+
+    #clock {
+        font-size: 2.8rem; /* Smaller clock font */
+        margin-top: 50px;
+    }
+
+    .card {
+        --card-max-width: 90%; /* Allow card to be wider on small screens */
+    }
 }
