@@ -81,9 +81,9 @@ body {
 /* --- Info Card --- */
 .card {
     /* --- Customization Variables --- */
-    --card-width: 2005%;
-    --card-max-width: 450px;
-    --card-min-height: 160px;
+    --card-width: 1500%;
+    --card-max-width: 330px;
+    --card-min-height: 120px;
     --title-size: 1.5rem;
     --desc-size: 1rem;
     --footer-size: 1.1rem;
@@ -111,7 +111,7 @@ body {
 .card-desc {
     font-size: var(--desc-size);
     color: #7C7C7C;
-    margin: 0 0 0px 0;
+    margin: 3px 0 0 0;
 }
 
 .card-footer {
