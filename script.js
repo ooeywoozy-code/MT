@@ -1,7 +1,4 @@
 function updateClock() {
-    const clock = document.getElementById('clock');
-    if (document.activeElement === clock) return; // Don't update if user is typing
-
     const now = new Date();
     let hours = now.getHours();
     const minutes = String(now.getMinutes()).padStart(2, '0');
@@ -11,8 +8,20 @@ function updateClock() {
     hours = hours % 12;
     hours = hours ? hours : 12; // the hour '0' should be '12'
 
-    const timeString = `${String(hours).padStart(2, '0')}:${minutes}:${seconds} ${ampm}`;
-    clock.textContent = timeString;
+    // Update Clock
+    const clock = document.getElementById('clock');
+    if (document.activeElement !== clock) {
+        const timeString = `${String(hours).padStart(2, '0')}:${minutes}:${seconds} ${ampm}`;
+        clock.textContent = timeString;
+    }
+
+    // Update Card Footer
+    const cardFooter = document.getElementById('card-footer');
+    if (cardFooter) {
+        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        const dateString = `${months[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}, ${hours}:${minutes} ${ampm}`;
+        cardFooter.textContent = "Expires " + dateString;
+    }
 }
 
 setInterval(updateClock, 1000);

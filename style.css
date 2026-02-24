@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap');
 
 /* --- Main Layout --- */
 body {
@@ -33,10 +34,10 @@ body {
 
 /* --- Clock --- */
 #clock {
-    margin-top: 30px;
+    margin-top: 80px;
     font-family: 'Roboto', sans-serif;
     font-size: 3rem;
-    color: #000000;
+    color: #404448;
     font-weight: bold;
     cursor: text;
 }
@@ -45,7 +46,7 @@ body {
 .circle {
     width: 200px;
     height: 200px;
-    background-color: #00d2ff;
+    background-color: #E87E34;
     border-radius: 50%;
     animation: sporadic-breathe 8s infinite ease-in-out;
 }
@@ -61,6 +62,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 /* --- Animation Keyframes --- */
@@ -74,4 +76,47 @@ body {
     75% { transform: scale(0.9); }
     90% { transform: scale(1.1); }
     100% { transform: scale(1); }
+}
+
+/* --- Info Card --- */
+.card {
+    /* --- Customization Variables --- */
+    --card-width: 2005%;
+    --card-max-width: 450px;
+    --card-min-height: 160px;
+    --title-size: 1.5rem;
+    --desc-size: 1rem;
+    --footer-size: 1.1rem;
+
+    background-color: #ffffff;
+    width: var(--card-width);
+    max-width: var(--card-max-width);
+    min-height: var(--card-min-height);
+    padding: 20px;
+    border-radius: 0;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    text-align: left;
+    font-family: 'Archivo', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: var(--title-size);
+    margin: 0 0 5px 0;
+    color: #404448;
+}
+
+.card-desc {
+    font-size: var(--desc-size);
+    color: #7C7C7C;
+    margin: 0 0 0px 0;
+}
+
+.card-footer {
+    font-size: var(--footer-size);
+    color: #404448;
+    font-weight: bold;
+    margin-top: auto;
 }
