@@ -35,6 +35,10 @@ body {
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .close-icon {
@@ -54,7 +58,7 @@ body {
 }
 
 .header-title {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: #404448;
     margin-bottom: 5px;
@@ -62,7 +66,7 @@ body {
 
 .header-desc {
     font-size: 1rem;
-    color: #7C7C7C;
+    color: #404448;
 }
 
 /* --- Wrapper for Circles --- */
@@ -160,7 +164,7 @@ body {
     --card-max-width: 450px;
     --card-min-height: 120px;
     --title-size: 1.5rem;
-    --desc-size: 1rem;
+    --desc-size: 0.888rem;
     --footer-size: 1.1rem;
 
     background-color: #ffffff;
@@ -214,5 +218,9 @@ body {
 
     .card {
         --card-max-width: 90%; /* Allow card to be wider on small screens */
+    }
+
+    .header-title {
+        font-size: 1.5rem;
     }
 }
