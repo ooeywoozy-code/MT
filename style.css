@@ -2,7 +2,8 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100dvh; /* Adapts to mobile browser address bars */
+    height: 80vh; /* Fallback for older browsers */
+    height: 80dvh; /* Adapts to mobile browser address bars */
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -37,6 +38,9 @@ body {
     background-color: #ffffff;
     border-radius: 50%;
     z-index: 10; /* Ensures it stays on top */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* --- Animation Keyframes --- */
