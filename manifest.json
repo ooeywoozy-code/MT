@@ -1,15 +1,9 @@
 {
-  "short_name": "MTF",
-  "name": "Metro Transit App",
-  "icons": [
-    {
-      "src": "icon-192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    }
-  ],
-  "start_url": "./index.html",
-  "background_color": "#ffffff",
-  "display": "standalone",
-  "theme_color": "#000000"
+    "name": "Metro Transit",
+    "short_name": "Metro",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "orientation": "portrait"
 }
