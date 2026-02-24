@@ -1,35 +1,53 @@
- /* 1. Reset and Center the Body */
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh; /* Take up full viewport height */
-            display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center;     /* Center vertically */
-            background-color: #1a1a1a; /* Dark background for contrast */
-        }
+/* --- Main Layout --- */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100dvh; /* Adapts to mobile browser address bars */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #ffffff;
+}
 
-        /* 2. Define the Circle */
-        .circle {
-            width: 100px;
-            height: 100px;
-            background-color: #00d2ff; /* Bright blue */
-            border-radius: 50%;        /* Makes the square a circle */
-            box-shadow: 0 0 20px rgba(0, 210, 255, 0.5); /* Optional glow */
-            
-            /* 3. Apply the Animation */
-            animation: breathe 3s infinite ease-in-out;
-        }
+/* --- Container --- */
+/* Holds both circles in the center of the screen */
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25vh; /* Adjust this value to position vertically */
+}
 
-        /* 4. Define the Animation Keyframes */
-        @keyframes breathe {
-            0% {
-                transform: scale(1); /* Normal size */
-            }
-            50% {
-                transform: scale(1.5); /* Expanded (1.5x size) */
-            }
-            100% {
-                transform: scale(1); /* Back to normal */
-            }
-        }
+/* --- Outer Circle (Animated) --- */
+.circle {
+    width: 200px;
+    height: 200px;
+    background-color: #00d2ff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+    animation: sporadic-breathe 8s infinite ease-in-out;
+}
+
+/* --- Inner Circle (Static) --- */
+.inner-circle {
+    position: absolute; /* Places this on top of the outer circle */
+    width: 80%;
+    height: 80%;
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 10; /* Ensures it stays on top */
+}
+
+/* --- Animation Keyframes --- */
+@keyframes sporadic-breathe {
+    0% { transform: scale(1); }
+    10% { transform: scale(1.1); }
+    20% { transform: scale(0.95); }
+    35% { transform: scale(1.25); }
+    50% { transform: scale(1.05); }
+    65% { transform: scale(1.3); }
+    75% { transform: scale(0.9); }
+    90% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
