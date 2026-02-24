@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px; /* Adjust this value to position vertically */
+    margin-top: 10px; /* Adjust this value to position vertically */
     flex-direction: column;
 }
 
@@ -75,6 +75,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 60px;
 }
 
 /* --- Clock --- */
@@ -161,7 +162,7 @@ body {
 .card {
     /* --- Customization Variables --- */
     --card-width: 90%;
-    --card-max-width: 450px;
+    --card-max-width: 440px;
     --card-min-height: 120px;
     --title-size: 1.5rem;
     --desc-size: 0.888rem;
