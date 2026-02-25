@@ -107,7 +107,7 @@ body {
 #clock {
     margin-top: var(--clock-margin-top);
     font-family: 'Roboto', sans-serif;
-    font-size: 4rem;
+    font-size: 3rem;
     color: #3c4043;
     font-weight: bold;
     cursor: text;
