@@ -5,7 +5,7 @@
 :root {
     --container-margin-top: 10px;      /* Moves the header text */
     --circles-margin-top: 20px;        /* Moves the circles */
-    --clock-margin-top: 80px;          /* Moves the clock */
+    --clock-margin-top: 65px;          /* Moves the clock */
     --card-margin-top: 30px;           /* Moves the info card */
 }
 
@@ -188,9 +188,9 @@ body {
     /* --- Customization Variables --- */
     --card-width: 90%;
     --card-max-width: 420px;
-    --card-min-height: 120px;
+    --card-min-height: 140px;
     --title-size: 1.5rem;
-    --desc-size: 0.888rem;
+    --desc-size: .888rem;
     --footer-size: 1rem;
 
     background-color: #ffffff;
@@ -198,6 +198,7 @@ body {
     max-width: var(--card-max-width);
     min-height: var(--card-min-height);
     padding: 20px;
+    box-sizing: border-box;
     border-radius: 0;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
     margin-top: var(--card-margin-top);
