@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap');
 
+/* --- Global Positioning Variables --- */
+:root {
+    --container-margin-top: 10px;      /* Moves the header text */
+    --circles-margin-top: 20px;        /* Moves the circles */
+    --clock-margin-top: 80px;          /* Moves the clock */
+    --card-margin-top: 30px;           /* Moves the info card */
+}
+
 /* --- Main Layout --- */
 body {
     margin: 0;
@@ -21,7 +29,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px; /* Adjust this value to position vertically */
+    margin-top: var(--container-margin-top);
     flex-direction: column;
 }
 
@@ -92,14 +100,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
+    margin-top: var(--circles-margin-top);
 }
 
 /* --- Clock --- */
 #clock {
-    margin-top: 80px;
+    margin-top: var(--clock-margin-top);
     font-family: 'Roboto', sans-serif;
-    font-size: 3.83rem;
+    font-size: 4rem;
     color: #3c4043;
     font-weight: bold;
     cursor: text;
@@ -192,7 +200,7 @@ body {
     padding: 20px;
     border-radius: 0;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-    margin-top: 30px;
+    margin-top: var(--card-margin-top);
     text-align: left;
     font-family: 'Archivo', sans-serif;
     display: flex;
@@ -232,7 +240,7 @@ body {
     }
 
     #clock {
-        font-size: 2.8rem; /* Smaller clock font */
+        font-size: 5rem; /* Smaller clock font */
         margin-top: 50px;
     }
 
@@ -242,5 +250,9 @@ body {
 
     .header-title {
         font-size: 1.5rem;
+    }
+
+    .footer {
+        height: 40px; /* Slightly smaller footer on mobile to save space */
     }
 }
