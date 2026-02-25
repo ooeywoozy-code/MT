@@ -107,7 +107,7 @@ body {
 #clock {
     margin-top: var(--clock-margin-top);
     font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
     color: #3c4043;
     font-weight: bold;
     cursor: text;
@@ -241,7 +241,7 @@ body {
     }
 
     #clock {
-        font-size: 2rem; /* Smaller clock font */
+        font-size: 3rem; /* Smaller clock font */
         margin-top: 50px;
     }
 
