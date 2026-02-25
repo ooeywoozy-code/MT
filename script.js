@@ -2,7 +2,9 @@ function setExpirationTime() {
     const cardFooter = document.getElementById('card-footer');
     if (cardFooter) {
         const now = new Date();
-        const expires = new Date(now.getTime() + 2 * 60 * 60 * 1000 - 7 * 60 * 1000); // Add 2 hours, subtract 7 minutes
+        const expires = new Date(now);
+        expires.setDate(expires.getDate() + 1);
+        expires.setHours(2, 0, 0, 0);
         let expHours = expires.getHours();
         const expMinutes = String(expires.getMinutes()).padStart(2, '0');
         const expAmpm = expHours >= 12 ? 'PM' : 'AM';

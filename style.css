@@ -200,7 +200,7 @@ body {
     padding: 20px;
     box-sizing: border-box;
     border-radius: 0;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2.3px 3.2px rgba(0, 0, 0, 0.2);
     margin-top: var(--card-margin-top);
     text-align: left;
     font-family: 'Archivo', sans-serif;
