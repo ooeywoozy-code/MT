@@ -29,7 +29,7 @@ body {
 .navbar {
     width: 100%;
     height: 60px;
-    background-color: #232425;
+    background-color: #1f1f1f;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -39,6 +39,22 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
+}
+
+.footer {
+    width: 100%;
+    height: 25px;
+    background-color: #1f1f1f;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    margin-top: auto;
 }
 
 .close-icon {
@@ -60,13 +76,14 @@ body {
 .header-title {
     font-size: 1.4rem;
     font-weight: bold;
-    color: #404448;
+    color: #1f1f1f;
     margin-bottom: 5px;
 }
 
 .header-desc {
     font-size: 1rem;
-    color: #404448;
+    font-family: 'Roboto', sans-serif;
+    color: #1f1f1f;
 }
 
 /* --- Wrapper for Circles --- */
@@ -82,8 +99,8 @@ body {
 #clock {
     margin-top: 80px;
     font-family: 'Roboto', sans-serif;
-    font-size: 3.6rem;
-    color: #404448;
+    font-size: 3.83rem;
+    color: #3c4043;
     font-weight: bold;
     cursor: text;
 }
@@ -94,7 +111,7 @@ body {
     height: 200px;
     background-color: #E87E34;
     border-radius: 50%;
-    animation: sporadic-breathe 4s infinite ease-in-out;
+    animation: sporadic-breathe 2.77s infinite ease-in-out;
 }
 
 /* --- Middle Circle (Grey, Inverse Animation) --- */
@@ -108,7 +125,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: inverse-breathe 4s infinite ease-in-out;
+    animation: inverse-breathe 2.77s infinite ease-in-out;
 }
 
 /* --- Inner Circle (Static) --- */
@@ -148,13 +165,13 @@ body {
 
 @keyframes inverse-breathe {
     0% { transform: translate(-50%, -50%) scale(1); }
-    10% { transform: translate(-50%, -50%) scale(0.92); }
-    20% { transform: translate(-50%, -50%) scale(1.05); }
-    35% { transform: translate(-50%, -50%) scale(0.9); }
+    10% { transform: translate(-50%, -50%) scale(0.9); }
+    20% { transform: translate(-50%, -50%) scale(1.2); }
+    35% { transform: translate(-50%, -50%) scale(0.8); }
     50% { transform: translate(-50%, -50%) scale(0.95); }
-    65% { transform: translate(-50%, -50%) scale(0.9); }
-    75% { transform: translate(-50%, -50%) scale(1.08); }
-    90% { transform: translate(-50%, -50%) scale(0.92); }
+    65% { transform: translate(-50%, -50%) scale(0.75); }
+    75% { transform: translate(-50%, -50%) scale(1.25); }
+    90% { transform: translate(-50%, -50%) scale(0.9); }
     100% { transform: translate(-50%, -50%) scale(1); }
 }
 
@@ -162,11 +179,11 @@ body {
 .card {
     /* --- Customization Variables --- */
     --card-width: 90%;
-    --card-max-width: 440px;
+    --card-max-width: 420px;
     --card-min-height: 120px;
     --title-size: 1.5rem;
     --desc-size: 0.888rem;
-    --footer-size: 1.1rem;
+    --footer-size: 1rem;
 
     background-color: #ffffff;
     width: var(--card-width);
@@ -185,18 +202,20 @@ body {
 .card-title {
     font-size: var(--title-size);
     margin: 0 0 5px 0;
-    color: #404448;
+    color: #5f6368;
+    font-weight: bold;
 }
 
 .card-desc {
     font-size: var(--desc-size);
-    color: #7C7C7C;
+    color: #5f6368;
     margin: 3px 0 0 0;
 }
 
 .card-footer {
     font-size: var(--footer-size);
-    color: #7C7C7C;
+    font-family: 'Roboto', sans-serif;
+    color: #5f6368;
     font-weight: bold;
     margin-top: auto;
 }

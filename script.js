@@ -29,11 +29,18 @@ function updateClock() {
     // Update Clock
     const clock = document.getElementById('clock');
     if (document.activeElement !== clock) {
-        const timeString = `${String(hours).padStart(2, '0')}:${minutes}:${seconds} ${ampm}`;
+        const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
         clock.textContent = timeString;
     }
+}
+
+function addFooter() {
+    const footer = document.createElement('div');
+    footer.className = 'footer';
+    document.body.appendChild(footer);
 }
 
 setExpirationTime();
 setInterval(updateClock, 1000);
 updateClock(); // Initial call
+addFooter();
