@@ -116,8 +116,8 @@ body {
 
 /* --- Outer Circle (Animated) --- */
 .circle {
-    width: 220px;
-    height: 220px;
+    width: 230px;
+    height: 230px;
     background-color: #E87E34;
     border-radius: 50%;
     animation: sporadic-breathe 2.77s infinite ease-in-out;
