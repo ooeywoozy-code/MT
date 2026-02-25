@@ -6,7 +6,7 @@
     --container-margin-top: 10px;      /* Moves the header text */
     --circles-margin-top: 20px;        /* Moves the circles */
     --clock-margin-top: 65px;          /* Moves the clock */
-    --card-margin-top: 30px;           /* Moves the info card */
+    --card-margin-top: 15px;           /* Moves the info card */
 }
 
 /* --- Main Layout --- */
