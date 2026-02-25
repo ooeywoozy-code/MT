@@ -90,6 +90,7 @@ body {
 
 .header-desc {
     font-size: 1rem;
+    font-weight: 600;
     font-family: 'Roboto', sans-serif;
     color: #1f1f1f;
 }
@@ -147,7 +148,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,7 +211,7 @@ body {
 .card-title {
     font-size: var(--title-size);
     margin: 0 0 5px 0;
-    color: #5f6368;
+    color: #46494d;
     font-weight: bold;
 }
 
