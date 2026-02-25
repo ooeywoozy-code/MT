@@ -115,8 +115,8 @@ body {
 
 /* --- Outer Circle (Animated) --- */
 .circle {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     background-color: #E87E34;
     border-radius: 50%;
     animation: sporadic-breathe 2.77s infinite ease-in-out;
@@ -139,8 +139,8 @@ body {
 /* --- Inner Circle (Static) --- */
 .inner-circle {
     position: absolute; /* Places this on top of the outer circle */
-    width: 80%;
-    height: 80%;
+    width: 160px;
+    height: 160px;
     background-color: #ffffff;
     border-radius: 50%;
     z-index: 10; /* Ensures it stays on top */
@@ -241,7 +241,7 @@ body {
     }
 
     #clock {
-        font-size: 5rem; /* Smaller clock font */
+        font-size: 4rem; /* Smaller clock font */
         margin-top: 50px;
     }
 
@@ -255,5 +255,10 @@ body {
 
     .footer {
         height: 40px; /* Slightly smaller footer on mobile to save space */
+    }
+
+    .inner-circle {
+        width: 120px;
+        height: 120px;
     }
 }
